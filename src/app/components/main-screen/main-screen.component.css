@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,900);
+
+.card-container{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.card-container h1{
+    font-family: 'Rubik', sans-serif; 
+    font-size:4em; 
+    text-transform:uppercase; 
+    font-weight:700;
+    color: rgb(211, 175, 245);
+    display: flex;
+    justify-content: center;
+    text-shadow : 6px 6px #0e0404
+}

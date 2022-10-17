@@ -1,0 +1,23 @@
+<div id="card-container" data-offset="2">
+   <div id="card" style="background: url({{movie.imgsrc}});">
+      <div class="shine"></div>
+      <div class="text-block">
+         <h1>{{movie.name}} <small>({{movie.year}}) {{movie.pg}}</small></h1>
+         <h3>{{movie.genre}}</h3>
+         <h3></h3>
+         <p>
+           {{movie.disc}}
+         </p>
+         <h3>{{movie.likeRate}}</h3>
+         <h3>Rating : {{movie.rating}}</h3>
+         <h3>Ticket Price : {{movie.ticketPrice}}/-</h3>
+         <h3>Tickets Available : {{movie.tickets}}</h3>
+         <br>
+         <button (click)="onBookClick(movie)">Book Tickets</button>
+         <button style="margin-left: 7px; margin-right:7px;"><a href={{movie.trailer}} target="_blank" style="text-decoration: none; color: white;">
+            Watch Trailer</a>
+         </button>
+         <button><a href={{movie.imdbTitle}} style="text-decoration: none; color: white;" target="_blank">IMDB Title</a></button>
+      </div>
+   </div>
+</div>

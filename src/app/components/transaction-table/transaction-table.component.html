@@ -1,0 +1,48 @@
+
+<h1 style="text-align: center; font-size:4em; font-weight:bolder">Booking Details</h1>
+  <div class="container">
+    <table mat-table matSort [dataSource]="transactionsSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell mat-sort-header="" *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="movie">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Movie Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.movie}} </td>
+          </ng-container>
+          <ng-container matColumnDef="theater">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Theater </th>
+            <td mat-cell *matCellDef="let element"> {{element.theater}} </td>
+          </ng-container>
+          <ng-container matColumnDef="showTime">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Show Time </th>
+            <td mat-cell *matCellDef="let element"> {{element.showTime}} </td>
+          </ng-container>
+          <ng-container matColumnDef="price">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+          </ng-container>
+          <ng-container matColumnDef="transID">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Transaction ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.transID}} </td>
+          </ng-container>
+          <ng-container matColumnDef="transDateTime">
+            <th mat-header-cell  mat-sort-header="" *matHeaderCellDef> Transaction Details </th>
+            <td mat-cell *matCellDef="let element"> {{element.transDateTime}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="updateDetails">
+            <th mat-header-cell *matHeaderCellDef> Update Details </th>
+            <td mat-cell *matCellDef="let element"> 
+              <button class="btn btn-light btn-sm" (click)="transactionUpdate(element)">Update</button>  
+              <button class="btn btn-danger btn-sm" (click)="transactionDelete(element)">Cancel</button>
+            </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>

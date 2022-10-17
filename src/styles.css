@@ -1,0 +1,8 @@
+body{
+    background-image: url(../src/assets/bg-hdMoon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

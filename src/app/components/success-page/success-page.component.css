@@ -1,0 +1,17 @@
+.main-c{
+    margin :0 auto;
+    display:inline-block;
+    align-items: center;
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.bg-c{
+    background-color: rgba(214, 175, 251, 0.854);
+}
+img{
+    width : 30%;
+}
+p{
+    color: white;
+}

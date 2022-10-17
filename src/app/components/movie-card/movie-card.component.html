@@ -1,0 +1,48 @@
+<!-- flip-card-container -->
+<h1>New Releases</h1>
+<div class="grid-container">
+	<div *ngIf="showLoader" class="mt-5 text-center">
+		<h1 style="text-shadow: 6px 6px black ;">Loading...</h1>
+	 </div>
+<div class="flip-card-container" style="--hue: 220" *ngFor="let movie of movies">
+		<div class="flip-card">
+			  <div class="card-front">
+				<figure>
+				  <div class="img-bg"></div>
+				  <img src={{movie.imgsrc}} alt={{movie.name}}>
+				  <figcaption>{{movie.name}}</figcaption>
+				</figure>
+		  
+				<ul>
+				  <li>{{movie.genre}}</li>
+				  <li>{{movie.time}}</li>
+				  <li>Theater : {{movie.theater}}</li>
+				  <li>Show Time : {{movie.showTime}}</li>
+				  <li>{{movie.likeRate}}</li>
+				</ul>
+			  </div>
+		  
+			  <div class="card-back">
+				<figure>
+				  <div class="img-bg"></div>
+				  <img src={{movie.imgsrc}} alt={{movie.name}}>
+				</figure>
+		  
+				<button (click)="redirectTo(movie)">Book Tickets</button>
+		  
+				<div class="design-container">
+				  <span class="design design--1"></span>
+				  <span class="design design--2"></span>
+				  <span class="design design--3"></span>
+				  <span class="design design--4"></span>
+				  <span class="design design--5"></span>
+				  <span class="design design--6"></span>
+				  <span class="design design--7"></span>
+				  <span class="design design--8"></span>
+				</div>
+			  </div>
+		  
+		</div>
+</div>
+		  <!-- /flip-card-container -->
+</div>
